@@ -1,0 +1,125 @@
+
+
+
+
+for (int j = 0; j < 9; j++) {
+			if (arr[j].getposx() != 0) {
+				gotoxy(arr[j].getposx()+1, arr[j].getposy());
+				cout << arr[j].getMove();
+			}
+		}
+
+
+
+		if (input == 13) {
+			arr[i].movexy(x, y);
+			arr[i].setMove(i);
+			++i;
+		}
+
+		while (true) {
+		clrscr();
+
+		display(x, y);
+
+		int input = _getch();
+
+		if (input == 'w') y -= 3;
+		if (input == 'a') x -= 8;
+		if (input == 's') y += 3;
+		if (input == 'd') x += 8;
+
+		if (x == 36) x = 12;
+		if (x == 4) x = 28;
+		if (y == 12) y = 3;
+		if (y == 0) y = 9;
+
+		
+
+		if (i == 9) break;
+
+
+	}
+
+		if (arr[0].getMove() == arr[1].getMove() && arr[1].getMove() == arr[2].getMove()) {
+			if (arr[0].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[0].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[3].getMove() == arr[4].getMove() && arr[4].getMove() == arr[5].getMove()) {
+			if (arr[3].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[3].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[6].getMove() == arr[7].getMove() && arr[7].getMove() == arr[8].getMove()) {
+			if (arr[6].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[6].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[0].getMove() == arr[3].getMove() && arr[3].getMove() == arr[6].getMove()) {
+			if (arr[0].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[0].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[1].getMove() == arr[4].getMove() && arr[4].getMove() == arr[7].getMove()) {
+			if (arr[1].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[1].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[2].getMove() == arr[5].getMove() && arr[5].getMove() == arr[8].getMove()) {
+			if (arr[2].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[2].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[0].getMove() == arr[4].getMove() && arr[4].getMove() == arr[8].getMove()) {
+			if (arr[0].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[0].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+		if (arr[2].getMove() == arr[4].getMove() && arr[4].getMove() == arr[6].getMove()) {
+			if (arr[2].getMove() == '0') {
+				win = '0';
+				break;
+			}
+			else if (arr[2].getMove() == 'X') {
+				win = 'X';
+				break;
+			}
+		}
+
+
